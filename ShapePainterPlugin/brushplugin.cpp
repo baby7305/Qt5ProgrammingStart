@@ -1,6 +1,7 @@
 #include <QStringList>
 #include <QRect>
 #include <QPainter>
+#include <QRandomGenerator>
 
 #include "brushplugin.h"
 
@@ -43,7 +44,7 @@ QRect BrushPlugin::mouseMove(const QString &brush, QPainter &painter,
                                 thickness, thickness);
         }
     } else if (brush == tr("Random Letters")) {
-        QChar ch('A' + (qrand() % 26));
+        QChar ch('A' + (QRandomGenerator::global()->bounded(26)));
 
         QFont biggerFont = painter.font();
         biggerFont.setBold(true);

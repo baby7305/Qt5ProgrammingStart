@@ -1,5 +1,6 @@
 #include <QDir>
 #include <QPluginLoader>
+#include <QActionGroup>
 
 #include "brushinterface.h"
 #include "mainwindow.h"

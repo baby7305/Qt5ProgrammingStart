@@ -13,7 +13,7 @@ PaintWidget::PaintWidget(QWidget *parent) :
     lastPos(-1, -1)
 {
     setAttribute(Qt::WA_StaticContents);
-    setAttribute(Qt::WA_NoBackground);
+    setAttribute(Qt::WA_NoSystemBackground);
 
     theImage.fill(qRgb(255, 255, 255));
 }
