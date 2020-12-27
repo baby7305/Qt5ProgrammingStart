@@ -1,14 +1,9 @@
-import QtQuick 2.2
+import QtQuick 2.2 as Quick
 
-Rectangle {
-    width: 400
-    height: 400
+Quick.Rectangle {
+    width: 300
+    height: 200
     color: "blue"
-
-    Image {
-        source: "pics/logo.png"
-        anchors.centerIn: parent
-    }
 }
 
 
