@@ -9,11 +9,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     StringDialog *dlg = new StringDialog(this);
-//    connect(dlg, &StringDialog::stringChanged,
-//            this, &MainWindow::showString);
 
-    connect(dlg, &StringDialog::stringChanged,
-            &QApplication::quit);
+    connect(dlg, &StringDialog::stringChanged, [=](QString str) {
+        if (str == "qt")
+            ui->stringLabel->setText("hello qt!");
+        else ui->stringLabel->setText("error!");
+        });
 
     dlg->show();
 }
